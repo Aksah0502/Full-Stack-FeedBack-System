@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin View</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <img src="Encryptron logo no bg.png" class="logo">
+        <p style="margin: 0;">Logged in as Admin</p>
+    </nav>
+
+    <div class="form-box">
+        <h2>All Feedback</h2>
+        <div id="feedbackList">Loading...</div>
+    </div>
+
+    <script>
+       fetch('http://localhost:8080/api/admin/feedbacks', {
+  method: 'GET',
+  credentials: 'include'  // very important
+})
+.then(r => r.json())
+.then(data => {
+  let list = data.map(f => `
+    <div style="border-bottom:1px solid #ddd;padding:10px 0;">
+      <b>Email:</b> ${f.email} <br>
+      <b>Rating:</b> ${f.rating}/5 <br>
+      <b>Feedback:</b> ${f.message}
+    </div>
+  `).join('');
+  document.getElementById('feedbackList').innerHTML = list || 'No feedback yet.';
+}).catch(err => {
+  document.getElementById('feedbackList').innerText = 'Failed to load feedback.';
+  console.error("Error loading feedback:", err);
+});
+
+    </script>
+</body>
+</html>

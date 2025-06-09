@@ -1,0 +1,63 @@
+body {
+    font-family: sans-serif;
+    background-color: #f3fef4;
+    margin: 0;
+}
+
+nav {
+    background-color: #E8F5E9;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    height: 40px;
+}
+
+nav button {
+    padding: 5px 15px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.form-box {
+    background: white;
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.form-box input, .form-box textarea, .form-box select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+small {
+    display: block;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.form-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}

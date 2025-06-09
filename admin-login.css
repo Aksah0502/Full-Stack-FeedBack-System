@@ -1,0 +1,30 @@
+body {
+    background-color: #eaf8e6;
+    font-family: Arial;
+}
+.login-box {
+    width: 300px;
+    margin: 100px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+input[type="text"], input[type="password"] {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+}
+button {
+    background-color: #298c3f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}

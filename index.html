@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Page</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <img src="Encryptron logo no bg.png" alt="EncryptroN Logo" class="logo">
+        <button onclick="location.href='admin-login.html'">Admin Login</button>
+    </nav>
+
+    <div class="form-box">
+        <img src="Encryptron logo no bg.png" class="form-logo" />
+        <h2>We Value Your Feedback!</h2>
+
+        <form id="feedbackForm">
+            <input type="text" name="name" placeholder="Name (optional)">
+            <input type="email" name="email" required placeholder="Email *">
+            <small>This email won't be used for promotions, only follow-up if needed.</small>
+
+            <label>Rating</label>
+            <select name="rating" required>
+                <option value="5">★★★★★ - Excellent</option>
+                <option value="4">★★★★☆ - Good</option>
+                <option value="3">★★★☆☆ - Okay</option>
+                <option value="2">★★☆☆☆ - Bad</option>
+                <option value="1">★☆☆☆☆ - Terrible</option>
+            </select>
+
+            <textarea name="message" rows="4" placeholder="Your feedback here..."></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="response"></p>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
